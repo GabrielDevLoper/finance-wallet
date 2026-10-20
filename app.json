@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "Minha Carteira",
+    "slug": "minha-carteira",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "minhacarteira",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.minhacarteira.app",
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true,
+        "CFBundleDevelopmentRegion": "pt_BR"
+      }
+    },
+    "android": {
+      "package": "com.minhacarteira.app",
+      "allowBackup": false,
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "name": "Minha Carteira · Prévia"
+    },
+    "plugins": [
+      [
+        "expo-sqlite",
+        {
+          "useSQLCipher": true
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Use o Face ID para acessar seus gastos."
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "17.0"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "inlineModules": {
+        "watchedDirectories": [
+          "native"
+        ]
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f6ff85b7-0752-4a80-bd8e-041e14eae524"
+      }
+    },
+    "owner": "hpbibi"
+  }
+}
